@@ -1,0 +1,121 @@
+---
+title: "PROJECT PROPOSAL_Harshini_ht442"
+author: "HARSHINI"
+date: "10/30/2020"
+output: html_document
+---
+
+HIGH LEVEL STATEMENT 
+
+My Project involves analyzing the cities across the Globe on their sustainability levels by creating a composite variable as a unit of analysis to measure the Sustainability of the cities. After creating the composite variable(that measures the sustainability of the cities), identifying this composite variable as a dependent variable, Statistical analysis will be performed across various independent variables to figure out the factors influencing each city's sustainability. Also, how each independent variable influences the individual sustainability parameters will be identified and correlated. A simple model will be created on how a city can be increased on a scale of sustainability by 10% through calibrated inputs. 
+
+PROJECT ANALYSIS ROUTE MAP 
+
+The Project begins with defining a City. By identifying the regions across the globe based on their population, sq kms of area and/or existence of highest level of local governance structure of that particular country in the region, cities will be identified across the Globe. The data of Cities will be collected from ref(1).
+
+From here,various sustainability parameters of these cities are identified and each city is measured across these individual parameters. 
+
+These are the various Sustainability Parameters on which a City can be measured upon :
+
+1.	Environmental Protection : Level of Carbon footprint, Air Pollution, Energy             efficiency (data from ref3)
+2.	Education - Level of Formal and Informal Skills attained(data from ref(4))
+3.	Waste Management - Sanitation Infrastructure(data from ref(8))
+4.	Crime - (Overall Crime rate of the City data from (ref9))
+5.	Social Equality - (data from (ref 4),ref 11)
+6.	Infrastructure facilities (data from ref 11)
+7.	Good Local Governance (data from ref 11 )
+8	Innovation factor(data from ref 12)
+
+Later a composite variable will be defined by combining all these parameters to measure the sustainability of a city on a numeric value. 
+
+Creating the Composite variable : Individual sustainability parameters data is collected from the cited sources(please review references), data wrangling techniques will be applied to eliminate errors, outliers, reshaping the data for each parameter. Based on the output of the data analysis, a final set of sustainability parameters are defined and these will be identified as indicators for creating composite variable. Weighed average values of these indicators will be taken for data aggregation and creating a composite variable. 
+
+The Cities are ranked based on their Sustainability Values(numeric values from the composite variable). 
+
+Considering this composite variable as a dependent variable, various factors indirectly influencing the composite variable are identified as independent variables and correlation of each independent variable with the dependent variable is measured. 
+
+Various Independent variables that are under consideration:
+
+1) Population & Population Distribution( Data from ref 1) 
+2) Income &  GDP, (Data from ref 6)
+3) Environmental Policies in Place, (Data from ref 13)
+4) Urbanization Rate,(Data from ref 14)
+5) Taxation Policies,(International Tax Competitivess Index data from ref(15)) 
+6) Education,(data from ref(4))
+7) Migration,(Economic power of cities data is extracted from ref(17) and is compared with overall population of the country,existing urban population and migration rates will be determined)
+8) Water Availability,(Data from ref 16)
+9) Environmental awareness of the society(Environmental awareness is correlated with tertiary education and data from ref(5) will be referred to ) 
+10) Government Welfare Schemes(social security programs data from ref(18))
+11) Foreign Direct Investment Policies & International Investments(data from ref 10)
+ 
+ The data for these variables will be web scrapped from various references cited in this document or otherwise. After Data Analysis is done, depending on the results, two or more independent variables will be tried to be club into one independent variable or a new independent variable will be added for more accuracy and a final set of independent variables will be evolved.  
+These Final Set of independent variables will be analyzed for their sensitivity on influencing the dependent variable. 
+
+Finally, the priority of independent variables that needs to be worked upon by various governments to increase the sustainability factor of a city at the earliest will be identified.The first 3 Independent variables from the created list can be discussed further by cities performing well on these 3 Independent variables and necessary recommendations will be built. Also, using these Independent variables, a simple model will be generated to see the best way to increase sustainability factor of a city by 10%  by manipulating Independent variables. 
+
+METHODS AIMED TO APPLY
+
+General tools to be applied : 
+
+Since the data is collected from various sources and not uniform in general with missing values and not in the desired format, dealing with missing values, filtering the data, reshaping it should be done to generate required output tables using Merging, Sorting, Concatenation,Groupby,Pandas,bs4 etc.  Multiple Linear Regressions are conducted for each independent variable and dependent variable.Clustered Linear Regression will be applied to increase the accuracy.
+
+Data Tables generated :
+
+a)Table of Cities across the Globe are created 
+b) Individual data sets of the  Sustainability parameters of these cities will be web scrapped and then sorted, checked for Not a Numbers(NaN)i.e., data will be wrangled. 
+c) A Table of Final Set of Sustainability Parameters is generated. 
+d)  A composite variable is defined and composite variable data table is generated for all the cities. 
+e) Independent variables data for all cities are web scrapped, sorted and final data is printed in tables(variable X value tables). 
+f)Each independent variables data table are compared with the dependent variable(composite variable) and correlation matrix is generated. 
+g)A small table of the top 3 influencing independent variables is generated. 
+i)Countries are sorted based on their performance on these three independent variables and data table is generated. 
+
+Data visualization: 
+
+1) Scatter plot of cities vs individual sustainability parameters is generated.  
+2) Histogram and Scatter plot of Cities(Y axis) with Composite variable(X Axis) is generated.  
+3)tile plots of overall sustainability of cities vs each independent variable is generated. 
+4) Histograms of top 10 and bottom 10 cities on the identified 3 independent variables are generated. 
+
+
+MEANING OF SUCCESS TO YOU
+
+Success of the project for me implies, successfully achieving the output of the project proposal that is figuring out the major factors that are impeding a city to turn into a Sustainable city. I would like to create a basic and simple prototype of a SIMULATION MODEL FOR SDG 11 where a city  can be converted into more sustainable by 10% with measurable/calibrated inputs. I also consider learning new techniques of Machine Learning, Data Wrangling and learning from peer projects, working on the project every day as measure of my success in the project.
+
+
+REFERENCES 
+
+1) https://www.kaggle.com/viswanathanc/world-cities-datasets
+2) http://data.un.org/Data.aspx?d=GHG&f=seriesID%3aCO2
+3) https://github.com/owid/co2-data (Data will be taken from Carbon emission data for           countries and  averaged with the number of cities in the country and total            area of the country vs areas of the urban centers )
+4) http://data.uis.unesco.org/ (Number of illiterates data set)
+5) http://data.uis.unesco.org/(Gross Graduation ratio from tertiary education data set)
+6) http://povertydata.worldbank.org/Poverty/Home (Extracting Poverty headcount on             country wise and calculating urban poverty by using % of urban population) 
+7) http://citycarbonfootprints.info/
+8) https://datacatalog.worldbank.org/dataset/what-waste-global-database  (from city            level dataset, city column and existence of waste governance structure and             primary point of collection columns are extracted)
+9) https://dataunodc.un.org/data/prison/persons%20held%20total% (persons held in prison           compared to overall population and taking urban population )
+10) https://data.worldbank.org/indicator/BX.KLT.DINV.CD.WD (fdi investments across             countries, divided by total number of cities in a country)
+11) https://cpi.unhabitat.org/download-raw-data 
+12) https://www.innovation-cities.com/index-2019-global-city-rankings/18842/
+13) https://stats.oecd.org/Index.aspx?DataSetCode=EPS (Environmental Policy stringency            index)
+14) https://ourworldindata.org/urbanization (absolute change in urbanization across a          country will be divided by number of cities in the country, to find average            urbanization of cities)
+15) https://taxfoundation.org/publications/international-tax-competitiveness-index/
+16) https://ourworldindata.org/water-use-stress (data from relative water usage over           the years is correlated to the availability of total freshwater resources and          is divided with number of cities in the region)
+17) https://www.mckinsey.com/~/media/McKinsey/Featured%20Insights/Urbanization/Urban%20world/MGI_urban_world_mapping_economic_power_of_cities_full_report.pdf
+18) https://www.ssa.gov/policy/docs/progdesc/ssptw/
+
+
+
+
+
+```{r setup, include=FALSE}
+
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+
+
