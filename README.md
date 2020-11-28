@@ -2,4 +2,4 @@
 This repository includes all the files related to my Final Project Submission for PPOL 564 Fall 2020
 
 
-Things to remember : Change the directory of the city data code.  
+Things to remember : Change the directory of the city data code 
